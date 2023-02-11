@@ -10,7 +10,7 @@ import json
 from obswebsocket import obsws, requests
 
 async def test():
-    message = '{ "command": "Stop_Recording", "Data": "Some Data"}'
+    message = '{ "command": "Stop_Server", "Data": "Some Data"}'
     x = json.loads(message)
     async with websockets.connect("ws://localhost:8001/") as websocket:
         await websocket.send(message)
