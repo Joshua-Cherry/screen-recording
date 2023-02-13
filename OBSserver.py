@@ -31,6 +31,7 @@ def on_open(ws):
 async def main():
 
     # ws = create_connection("wss://172.19.16.37:3101?client_type=screen_capture", sslopt={"cert_reqs": ssl.CERT_NONE})
+    print("test")
     ws = websocket.WebSocketApp("wss://172.19.16.37:3101?client_type=screen_capture", on_open = on_open, on_message = on_message, on_error = on_error, on_close = on_close)
     ws.run_forever(sslopt={"cert_reqs": ssl.CERT_NONE})
     # ws.send("Hello, World")
