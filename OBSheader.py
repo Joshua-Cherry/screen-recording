@@ -4,6 +4,6 @@ host = "localhost"
 port = 4444
 password = "secret"
 
-START_RECORDING = "Start_Recording"
-STOP_RECORDING = "Stop_Recording"
-STOP_SERVER = "Stop_Server"
+START_RECORDING = "server_cmd_recording_start"
+STOP_RECORDING = "server_cmd_recording_stop"
+STOP_OBS = "server_cmd_obs_stop"
