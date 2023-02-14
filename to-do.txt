@@ -1,0 +1,2 @@
+Create recording as an mp4/h264 codec
+Why isn't anything showing up in the recording?

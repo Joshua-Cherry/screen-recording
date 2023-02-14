@@ -11,10 +11,11 @@ import json
 from obswebsocket import obsws, requests
 
 async def test():
-    message = '{ "command": "server_cmd_stop_obs", "Data": "Some Data"}'
+    message = '{ "command": "server_cmd_recording_start", "Data": "Some Data"}'
     
     ws = websocket.WebSocketApp("wss://172.19.16.37:3101?client_type=screen_capture")
     ws.send(message)
+    time.sleep(2)
     ws.close()
     # x = json.loads(message)
     # async with websockets.connect("wss://172.19.16.37:3101?client_type=screen_capture") as websocket:
