@@ -5,6 +5,7 @@ import time
 import asyncio
 import websocket
 from datetime import date
+import re
 
 import win32gui, win32con
 
@@ -46,15 +47,21 @@ class OBS_controller:
             for pid in (process.pid for process in psutil.process_iter() if process.name()=="obs64"):
                 os.kill(pid)
             exit()
-            
-    def create_scene(self, name):
-        self.dbg("Creating scene " + name)
-        self.obsws.call(requests.CreateScene(name))
     
-    def create_source(self, source_name, source_kind, scene_name):
+    def setup_source(self, source_name, source_kind, scene_name):
+        
+        # This section is settup up and swtiching to a scene
+        self.dbg("Creating scene " + scene_name)
+        self.obsws.call(requests.CreateScene(scene_name))
+        self.obsws.call(requests.SetCurrentScene(scene_name))
+        
+        # Look for the chrome window
+        win32gui.EnumWindows(self.winEnumHandler, None )
+        
+        # Creating a source and switching to it here
         self.dbg("Creating source " + source_name)
         id = self.obsws.call(requests.CreateSource(source_name, source_kind, scene_name))
-        time.sleep(2)
+        self.dbg("Source ID" + str(id))
         self.obsws.call(requests.SetSourceSettings(source_name, OBSheader.SOURCE))
         self.scene_ids.append(id)       
     
@@ -78,17 +85,10 @@ class OBS_controller:
         f.close()
 
 
-
-
-
-
-
-
-
-
-
-
-
+    def winEnumHandler(self, hwnd, ctx ):
+        if 'chrome' in win32gui.GetWindowText( hwnd ).lower():
+            self.dbg("FOUND! - " + win32gui.GetWindowText( hwnd ))
+            OBSheader.SOURCE = {'window': win32gui.GetWindowText( hwnd ) + ':Chrome_WidgetWin_1:chrome.exe'}
 
 
 ###############################################################################################################################
@@ -101,15 +101,14 @@ async def main():
     time.sleep(2)
     if response != None:
         exit()
-    # Minimize = win32gui.GetForegroundWindow()
-    # win32gui.ShowWindow(Minimize, win32con.SW_MINIMIZE)
+    Minimize = win32gui.GetForegroundWindow()
+    win32gui.ShowWindow(Minimize, win32con.SW_MINIMIZE)
     
     
     # Initializing obs and websocket connection here
     obs_controller = OBS_controller()
     # time.sleep(2)
-    obs_controller.create_scene(OBSheader.SCENE_NAME)
-    obs_controller.create_source(OBSheader.SOURCE_NAME, OBSheader.SCOURCE_KIND, OBSheader.SCENE_NAME)
+    obs_controller.setup_source(OBSheader.SOURCE_NAME, OBSheader.SCOURCE_KIND, OBSheader.SCENE_NAME)
     
     #########################################################################################################
     # Connecting to Ismael's server and setting the ssl serts to none. Do we want to do this in production? #
@@ -124,7 +123,7 @@ async def main():
             result =  ws.recv()
             obs_controller.handle_command(result)
         except Exception as inst:
-            print("Exception", inst)
+            obs_controller.dbg("Exception - " + inst)
             obs_controller.ws.close()
             exit()
 

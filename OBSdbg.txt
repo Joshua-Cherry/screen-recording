@@ -213,3 +213,86 @@ Received message
 Started recording
 Received message
 Stopped recording
+Creating scene recording
+Creating source recording
+Creating scene recording
+Creating scene recording
+Creating source recording
+Connection opened
+Creating scene recording
+Creating scene recording
+Creating scene recording
+Creating scene recording
+Creating scene recording
+Creating source recording
+Connection opened
+Creating scene recording
+Creating scene recording
+Creating source recording
+Connection opened
+Creating scene recording
+Creating source recording
+Connection opened
+Creating scene recording
+Creating source recording
+Connection opened
+Creating scene recording
+Creating source recording
+Creating scene recording
+Creating source recording
+Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: failed ({'error': 'a source with that name already exists'})>
+Connection opened
+Creating scene Test Recording
+Creating source recording
+Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Creating scene Test Recording
+Creating source recording
+Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Creating scene Test Recording
+Creating source recording
+Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Creating scene Test Recording
+Creating scene Test Recording
+Creating scene Test Recording
+Creating scene Test Recording
+Creating source recording
+Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Creating scene Test Recording
+Creating source recording
+Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Creating scene Test Recording
+Creating source recording
+Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: failed ({'error': 'a source with that name already exists'})>
+Connection opened
+Creating scene Test Recording
+Creating source recording
+Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Creating scene Test Recording
+Creating source recording
+Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Creating scene Test Recording
+Creating source recording
+Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Creating scene Test Recording
+FOUND! - Check if String Contains a Substring in Python - Google Chrome
+Creating source recording
+Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Creating scene Test Recording
+FOUND! - Check if String Contains a Substring in Python - Google Chrome
+Creating source recording
+Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Creating scene Test Recording
+FOUND! - Check if String Contains a Substring in Python - Google Chrome
+Creating source recording
+Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
