@@ -34,7 +34,6 @@ class OBS_controller:
         if message['command'] == OBSheader.START_RECORDING:
             self.obsws.call(requests.SetFilenameFormatting("TestName"))         
             self.obsws.call(requests.StartRecording())    
-            print(self.obsws.call(requests.GetRecordingStatus()))
             CURRENT_STATE = 'Recording'     
             self.dbg("Started recording")    
         if message['command'] == OBSheader.STOP_RECORDING:

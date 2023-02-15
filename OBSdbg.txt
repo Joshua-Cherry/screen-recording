@@ -296,3 +296,55 @@ FOUND! - Check if String Contains a Substring in Python - Google Chrome
 Creating source recording
 Source ID<CreateSource request ({'sourceName': 'recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
 Connection opened
+Creating scene Test Recording
+Creating source Inmate_recording
+Source ID<CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Creating scene Test Recording
+FOUND! - (1) Breaking Ned (Breaking Bad x The Simpsons) - YouTube - Google Chrome
+Creating source Inmate_recording
+Source ID<CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: failed ({'error': 'a source with that name already exists'})>
+Connection opened
+Received message
+Started recording
+Received message
+Stopped recording
+Creating scene Test Recording
+FOUND! - obs-websocket/protocol.md at 4.x-compat · obsproject/obs-websocket - Google Chrome
+Creating source Inmate_recording
+Source ID<CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Received message
+Started recording
+Received message
+Stopped recording
+Creating scene Test Recording
+FOUND! - obs-websocket/protocol.md at 4.x-compat-new-cmake · obsproject/obs-websocket - Google Chrome
+Creating source Inmate_recording
+Source ID<CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Received message
+Creating scene Test Recording
+FOUND! - obs-websocket/protocol.md at 4.x-compat-new-cmake · obsproject/obs-websocket - Google Chrome
+Creating source Inmate_recording
+Source ID<CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Received message
+Creating scene Test Recording
+FOUND! - obs-websocket/protocol.md at 4.x-compat-new-cmake · obsproject/obs-websocket - Google Chrome
+Creating source Inmate_recording
+Source ID<CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Received message
+Started recording
+Received message
+Stopped recording
+Creating scene Test Recording
+FOUND! - obs-websocket/protocol.md at 4.x-compat-new-cmake · obsproject/obs-websocket - Google Chrome
+Creating source Inmate_recording
+Source ID<CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Received message
+Started recording
+Received message
+Stopped recording
