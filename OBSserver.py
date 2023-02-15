@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 
-import sys
 import time
 import asyncio
 import websocket
 from datetime import date
-import re
+import ffmpeg
 
 import win32gui, win32con
 
@@ -31,15 +30,30 @@ class OBS_controller:
     def handle_command(self, command):
         message = json.loads(command)      
         print(message['command'])    
-        if message['command'] == OBSheader.START_RECORDING:
-            self.obsws.call(requests.SetFilenameFormatting("TestName"))         
+        if message['command'] == OBSheader.START_RECORDING:            
+            
+            self.obsws.call(requests.SetFilenameFormatting(OBSheader.RECORDING_FILENAME))     
+            
+            # Make sure we check the directory exist before setting as our 
+            if not os.path.exists(OBSheader.RECORDING_FOLDER):
+                os.mkdir(OBSheader.RECORDING_FOLDER)
+            self.obsws.call(requests.SetRecordingFolder(OBSheader.RECORDING_FOLDER))  
+            
+            
             self.obsws.call(requests.StartRecording())    
             CURRENT_STATE = 'Recording'     
-            self.dbg("Started recording")    
+            self.dbg("Current State - " + CURRENT_STATE)    
+            
         if message['command'] == OBSheader.STOP_RECORDING:
             self.obsws.call(requests.StopRecording())
             CURRENT_STATE = 'Not recording'
-            self.dbg("Stopped recording")    
+            self.dbg("Current State - " + CURRENT_STATE)   
+            
+            mkv_name = OBSheader.RECORDING_FOLDER + OBSheader.RECORDING_FILENAME + ".mkv"
+            mp4_name = OBSheader.RECORDING_FOLDER + OBSheader.RECORDING_FILENAME + ".mp4"
+            # input = ffmpeg.input(mkv_name)
+            os.system("ffmpeg -i {0} {1}".format(mkv_name, mp4_name))
+        
         if message['command'] == OBSheader.STOP_OBS:
             print("Attempting to shut down")
             self.obsws.disconnect()
@@ -50,7 +64,7 @@ class OBS_controller:
     def setup_source(self, source_name, source_kind, scene_name):
         
         # This section is settup up and swtiching to a scene
-        self.dbg("Creating scene " + scene_name)
+        self.dbg("Creating scene - " + scene_name)
         self.obsws.call(requests.CreateScene(scene_name))
         self.obsws.call(requests.SetCurrentScene(scene_name))
         
@@ -58,9 +72,9 @@ class OBS_controller:
         win32gui.EnumWindows(self.winEnumHandler, None )
         
         # Creating a source and switching to it here
-        self.dbg("Creating source " + source_name)
+        self.dbg("Creating source - " + source_name)
         id = self.obsws.call(requests.CreateSource(source_name, source_kind, scene_name))
-        self.dbg("Source ID" + str(id))
+        self.dbg("Source ID - " + str(id))
         self.obsws.call(requests.SetSourceSettings(source_name, OBSheader.SOURCE))
         self.scene_ids.append(id)       
     
@@ -68,13 +82,13 @@ class OBS_controller:
         self.dbg("Received message")
         self.handle_command(err)
 
-    def on_error(self, ws):
-        self.dbg("Received error")
+    def on_error(self, ws, error):
+        self.dbg("Received error - " + str(error))
 
-    def on_close(self):
+    def on_close(self, ws, err):
         self.dbg("Connection closed")
 
-    def on_open(self, ws):
+    def on_open(self, ws, err):
         self.dbg("Connection opened")
 
     def dbg(self, dbg_string):

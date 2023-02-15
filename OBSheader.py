@@ -13,6 +13,8 @@ WBESOCKET_PATH = "wss://172.19.16.37:3101?client_type=screen_capture"
 SCENE_NAME = "Test Recording"
 SCOURCE_KIND = "window_capture"
 SOURCE_NAME = "Inmate_recording"
+RECORDING_FOLDER = "C:\\Users\\Cherry\\Documents\\MyFolder\\Cosc\\PythonFiles\\recordings\\"
+RECORDING_FILENAME = "Test_Recording"
 
 SOURCE =  ''
 

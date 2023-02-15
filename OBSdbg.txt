@@ -348,3 +348,53 @@ Received message
 Started recording
 Received message
 Stopped recording
+Creating scene Test Recording
+FOUND! - Converting mkv files to mp4 with ffmpeg-python - Stack Overflow - Google Chrome
+Creating source Inmate_recording
+Source ID<CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Connection opened
+Received message
+Current State - Recording
+Received message
+Current State - Not recording
+Creating scene Test Recording
+FOUND! - ffmpeg-python: Python bindings for FFmpeg — ffmpeg-python documentation - Google Chrome
+Creating source Inmate_recording
+Source ID<CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Received error
+Received message
+Current State - Recording
+Received message
+Current State - Not recording
+Received error
+Creating scene Test Recording
+FOUND! - ffmpeg-python: Python bindings for FFmpeg — ffmpeg-python documentation - Google Chrome
+Creating source Inmate_recording
+Source ID<CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: failed ({'error': 'a source with that name already exists'})>
+Creating scene Test Recording
+FOUND! - ffmpeg-python: Python bindings for FFmpeg — ffmpeg-python documentation - Google Chrome
+Creating source Inmate_recording
+Source ID<CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: failed ({'error': 'a source with that name already exists'})>
+Creating scene Test Recording
+FOUND! - ffmpeg-python: Python bindings for FFmpeg — ffmpeg-python documentation - Google Chrome
+Creating source Inmate_recording
+Source ID<CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Creating scene - Test Recording
+FOUND! - ffmpeg-python: Python bindings for FFmpeg — ffmpeg-python documentation - Google Chrome
+Creating source - Inmate_recording
+Source ID - <CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Received error - on_open() missing 1 required positional argument: 'err'
+Received message
+Current State - Recording
+Received message
+Current State - Not recording
+Received error - module 'ffmpeg' has no attribute 'input'
+Creating scene - Test Recording
+FOUND! - ffmpeg-python: Python bindings for FFmpeg — ffmpeg-python documentation - Google Chrome
+Creating source - Inmate_recording
+Source ID - <CreateSource request ({'sourceName': 'Inmate_recording', 'sourceKind': 'window_capture', 'sceneName': 'Test Recording', 'sourceSettings': None, 'setVisible': None}) called: success ({'itemId': 1})>
+Received error - on_open() missing 1 required positional argument: 'err'
+Received message
+Current State - Recording
+Received message
+Current State - Not recording
